@@ -1,0 +1,173 @@
+body {
+    display: flex;
+    background-color: hsl(214, 17%, 92%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    min-height: 100vh;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1080px;
+    margin: auto;
+    gap: 30px;
+    width: 100%;
+}
+
+.quotation-mark {
+    position: absolute;
+    top: 1px;
+    right: 65px;
+    z-index: 0;
+}
+
+h3 {
+    position: relative;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.profile {
+    display: flex;
+}
+
+.profile-pic {
+    border: 2px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+
+.verified-graduate {
+    font-size: 11px;
+    opacity: 0.7;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.profile-info {
+    margin-left: 10px;
+}
+
+.card-daniel .profile-pic {
+    border-color: hsl(264, 82%, 80%);
+}
+
+.card-patrick .profile-pic {
+    border-color: hsl(263, 55%, 52%);
+}
+
+.cards {
+    border-radius: 10px;
+    box-shadow: 20px 40px 70px hsl(224, 10%, 45%);
+    padding: 20px;
+}
+
+.card-daniel {
+    position: relative;
+    background-color: hsl(263, 55%, 52%);
+    grid-column: 1 / span 2;
+    color: white;
+}
+
+.card-jonathan {
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+}
+
+.card-patrick {
+    background-color: hsl(219, 29%, 14%);
+    grid-column: 2 / span 2;
+    color: white;
+}
+
+.card-kira {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+    color: hsl(219, 29%, 14%);
+}
+
+.card-jeanette {
+    grid-column: 1;
+    grid-row: 2;
+    color: hsl(219, 29%, 14%);
+}
+
+.card-daniel p {
+    opacity: 0.8;
+    z-index: 0;
+}
+
+.card-jonathan p {
+    opacity: 0.8;
+}
+
+.card-patrick p {
+    opacity: 0.8;
+}
+
+.card-jeanette p {
+    color: hsl(217, 19%, 35%);
+}
+
+.card-kira p {
+    color: hsl(217, 19%, 35%);
+}
+
+@media (max-width: 375px){
+    main {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cards {
+        padding: 30px;
+        margin: 0 30px;
+    }
+
+    .card-patrick {
+        grid-column: 1;
+        order: 4;
+    }
+
+    .card-jeanette {
+        grid-column: 1;
+        grid-row: auto;
+        order: 3;
+    }
+
+    .card-daniel {
+        grid-column: 1;
+        order: 1;
+    }
+
+    .card-jonathan {
+        grid-column: 1;
+        order: 2;
+    }
+
+    .card-kira {
+        grid-column: 1;
+        grid-row: auto;
+        order: 5;
+    }
+    .cards:first-child {
+        margin-top: 60px;
+    }
+
+    .cards:last-child {
+        margin-bottom: 60px;
+    }
+
+    .card-daniel > .quotation-mark {
+        display: none;
+    }
+
+    .card-daniel > h3 {
+        padding-right: 25px;
+    }
+    
+}
